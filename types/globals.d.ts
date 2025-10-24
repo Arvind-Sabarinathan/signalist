@@ -1,3 +1,10 @@
+import type {
+  Control,
+  FieldError,
+  UseFormRegister,
+  RegisterOptions
+} from "react-hook-form";
+
 declare global {
   module "*.css";
   type SignInFormData = {
