@@ -12,13 +12,13 @@ interface TradingViewWidgetProps {
   className?: string;
 }
 
-const TradingViewWidget = ({
+function TradingViewWidget  ({
   title,
   scriptUrl,
   config,
   height = 600,
   className,
-}: TradingViewWidgetProps) => {
+}: TradingViewWidgetProps)  {
   const containerRef = useTradingViewWidget(scriptUrl, config, height);
 
   return (
