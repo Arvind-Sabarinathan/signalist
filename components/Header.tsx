@@ -14,7 +14,7 @@ export default function Header() {
             width={140}
             height={32}
             className="h-8 w-auto cursor-pointer"
-          ></Image>
+          />
         </Link>
 
         <nav className="hidden sm:block">
