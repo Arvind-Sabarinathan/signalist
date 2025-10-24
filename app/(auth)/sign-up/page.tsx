@@ -94,6 +94,12 @@ export default function SignUpPage() {
               value: 8,
               message: "Password must be at least 8 characters",
             },
+            pattern: {
+              value:
+                /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}$/,
+              message:
+                "Password must include uppercase, lowercase, number, and special character",
+            },
           }}
         />
         <SelectField
