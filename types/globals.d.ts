@@ -1,5 +1,12 @@
 declare module "*.css";
 
+import type {
+  Control,
+  FieldError,
+  UseFormRegister,
+  RegisterOptions
+} from "react-hook-form";
+
 declare global {
   type SignInFormData = {
     email: string;
