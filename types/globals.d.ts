@@ -1,5 +1,6 @@
+declare module "*.css";
+
 declare global {
-  module "*.css";
   type SignInFormData = {
     email: string;
     password: string;
@@ -57,9 +58,17 @@ declare global {
   };
 
   type SearchCommandProps = {
+    // base
+    initialStocks: StockWithWatchlistStatus[];
+    // rendering/trigger
     renderAs?: "button" | "text";
     label?: string;
-    initialStocks: StockWithWatchlistStatus[];
+    buttonLabel?: string;
+    buttonVariant?: "primary" | "secondary";
+    className?: string;
+    // controlled state
+    open?: boolean;
+    setOpen?: (open: boolean) => void;
   };
 
   type WelcomeEmailData = {
@@ -167,15 +176,6 @@ declare global {
 
   type WatchlistNewsProps = {
     news?: MarketNewsArticle[];
-  };
-
-  type SearchCommandProps = {
-    open?: boolean;
-    setOpen?: (open: boolean) => void;
-    renderAs?: "button" | "text";
-    buttonLabel?: string;
-    buttonVariant?: "primary" | "secondary";
-    className?: string;
   };
 
   type AlertData = {

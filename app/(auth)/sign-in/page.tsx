@@ -33,6 +33,7 @@ export default function SignInPage() {
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
         <InputField
           name="email"
+          type="email"
           label="E-mail"
           placeholder="john.doe@gmail.com"
           register={register}
@@ -40,7 +41,7 @@ export default function SignInPage() {
           validation={{
             required: "Email is required",
             pattern: {
-              value: /^\w+@\w+\.\w+$/,
+              value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
               message: "Enter a valid email",
             },
           }}
@@ -49,7 +50,7 @@ export default function SignInPage() {
         <InputField
           name="password"
           label="Password"
-          placeholder="Enter a your password"
+          placeholder="Enter your password"
           type="password"
           register={register}
           error={errors.password}

@@ -21,7 +21,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="relative z-10 lg:mt-4 lg:mb-16">
           <blockquote className="auth-blockquote">
             Signalist turned my watchlist into a winning list. The alerts are
-            spot-on, and i feel more confident making moves in the market.
+            spot-on, and I feel more confident making moves in the market.
           </blockquote>
           <div className="flex items-center justify-between">
             <div>
@@ -31,7 +31,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="flex items-center gap-0.5">
               {[1, 2, 3, 4, 5].map((star) => (
                 <Image
-                  src="assets/icons/star.svg"
+                  src="/assets/icons/star.svg"
                   alt="star"
                   key={star}
                   width={20}

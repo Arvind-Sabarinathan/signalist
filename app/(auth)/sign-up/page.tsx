@@ -50,10 +50,17 @@ export default function SignUpPage() {
           placeholder="John Doe"
           register={register}
           error={errors.fullName}
-          validation={{ required: "Full Name is required", minLength: 2 }}
+          validation={{
+            required: "Full Name is required",
+            minLength: {
+              value: 2,
+              message: "Full Name must be at least 2 characters",
+            },
+          }}
         />
         <InputField
           name="email"
+          type="email"
           label="E-mail"
           placeholder="john.doe@gmail.com"
           register={register}
@@ -61,7 +68,7 @@ export default function SignUpPage() {
           validation={{
             required: "Email is required",
             pattern: {
-              value: /^\w+@\w+\.\w+$/,
+              value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
               message: "Enter a valid email",
             },
           }}
