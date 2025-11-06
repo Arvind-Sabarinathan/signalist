@@ -26,7 +26,13 @@ export default function SignInPage() {
   const onSubmit = async (data: SignInFormData) => {
     try {
       const result = await signInWithEmail(data);
-      if (result.success) router.push("/");
+      if (result.success) {
+        router.push("/");
+      } else {
+        toast.error("Sign in failed", {
+          description: result.error || "Failed to sign in",
+        });
+      }
     } catch (error) {
       console.error(error);
       toast.error("Sign in failed", {
