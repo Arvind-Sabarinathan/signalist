@@ -37,7 +37,6 @@ export default function UserDropdown({
           className="flex items-center gap-3 text-gray-400 hover:text-yellow-500"
         >
           <Avatar className="h-8 w-8">
-            <AvatarImage src="https://easydrawingguides.com/wp-content/uploads/2024/06/how-to-draw-an-easy-spider-man-featured-image-1200.png" />
             <AvatarFallback className="bg-yellow-500 text-sm font-bold text-yellow-900">
               {user.name[0]}
             </AvatarFallback>
@@ -54,7 +53,6 @@ export default function UserDropdown({
         <DropdownMenuLabel>
           <div className="relative flex items-center gap-3 py-2">
             <Avatar className="h-10 w-10">
-              <AvatarImage src="https://easydrawingguides.com/wp-content/uploads/2024/06/how-to-draw-an-easy-spider-man-featured-image-1200.png" />
               <AvatarFallback className="bg-yellow-500 text-sm font-bold text-yellow-900">
                 {user.name[0]}
               </AvatarFallback>
