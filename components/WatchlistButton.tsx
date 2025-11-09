@@ -1,9 +1,9 @@
 "use client";
-import { useMemo, useState } from "react";
+
+import { useMemo, useState, useEffect } from "react";
 
 const WatchlistButton = ({
   symbol,
-  company,
   isInWatchlist,
   showTrashIcon = false,
   type = "button",
