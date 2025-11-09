@@ -29,6 +29,7 @@ const WatchlistButton = ({
   if (type === "icon") {
     return (
       <button
+        type="button"
         title={
           added
             ? `Remove ${symbol} from watchlist`
@@ -62,6 +63,7 @@ const WatchlistButton = ({
 
   return (
     <button
+      type="button"
       className={`watchlist-btn ${added ? "watchlist-remove" : ""}`}
       onClick={handleClick}
     >
