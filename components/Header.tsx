@@ -5,7 +5,7 @@ import UserDropdown from "./UserDropdown";
 import { searchStocks } from "@/lib/actions/finnhub.actions";
 
 export default async function Header({ user }: { user: User }) {
-  const initalStocks = await searchStocks();
+  const initialStocks = await searchStocks();
 
   return (
     <header className="header sticky top-0">
@@ -21,10 +21,10 @@ export default async function Header({ user }: { user: User }) {
         </Link>
 
         <nav className="hidden sm:block">
-          <NavItems initialStocks={initalStocks} />
+          <NavItems initialStocks={initialStocks} />
         </nav>
 
-        <UserDropdown user={user} initialStocks={initalStocks} />
+        <UserDropdown user={user} initialStocks={initialStocks} />
       </div>
     </header>
   );
