@@ -15,7 +15,7 @@ export const getAuth = async () => {
   if (!db) throw new Error("MongoDB connection not found!");
 
   authInstance = betterAuth({
-    database: mongodbAdapter(db),
+    database: mongodbAdapter(db as any),
     secret: process.env.BETTER_AUTH_SECRET,
     baseURL: process.env.BETTER_AUTH_URL,
     emailAndPassword: {
@@ -27,7 +27,7 @@ export const getAuth = async () => {
       autoSignIn: true,
     },
     plugins: [nextCookies()],
-  });
+  }) as unknown as ReturnType<typeof betterAuth>;
 
   return authInstance;
 };
